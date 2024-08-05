@@ -24,4 +24,5 @@ columns_to_convert = [
     "Soundcloud Streams", "Shazam Counts", "Explicit Track", "YouTube Playlist Reach"
 ] #big int columns failing dbt seed surpassing postgres int
 newdfspot = clean_and_convert(dfspot, columns_to_convert)
+newdfspot = newdfspot.fillna(0) #replace NaNs
 newdfspot.to_csv('cleanedspotify.csv', encoding='utf-8', index=False)
