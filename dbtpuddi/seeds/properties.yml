@@ -4,28 +4,26 @@ seeds:
   - name: spotify
     config:
       column_types:
-        "All Time Rank": bigint
-        "Spotify Streams": bigint
-        "Spotify Playlist Count": bigint
-        "Spotify Playlist Reach": bigint
-        #"Spotify Popularity": bigint #float
-        "YouTube Views": bigint
-        "YouTube Likes": bigint
-        "TikTok Posts": bigint
-        "TikTok Likes": bigint
-        "TikTok Views": bigint
-        "YouTube Playlist Reach": bigint #float
-        #"Apple Music Playlist Count": bigint #float
-        "AirPlay Spins": bigint
-        "SiriusXM Spins": bigint
-        #"Deezer Playlist Count": bigint #float
-        "Deezer Playlist Reach": bigint
-        #"Amazon Playlist Count": bigint #float
-        "Pandora Streams": bigint
-        "Pandora Track Stations": bigint
-        "Soundcloud Streams": bigint
-        "Shazam Counts": bigint
-        #"TIDAL Popularity": bigint #float64
-        "Explicit Track": bigint
-        "Release Date": date
-
+        "all_time_rank": bigint
+        "spotify_streams": bigint
+        "spotify_playlist_count": bigint
+        "spotify_playlist_reach": bigint
+        "youtube_views": bigint
+        "youtube_likes": bigint
+        "tiktok_posts": bigint
+        "tiktok_likes": bigint
+        "tiktok_views": bigint
+        "youtube_playlist_reach": bigint
+        "airplay_spins": bigint
+        "siriusxm_spins": bigint
+        "deezer_playlist_reach": bigint
+        "pandora_streams": bigint
+        "pandora_track_stations": bigint
+        "soundcloud_streams": bigint
+        "shazam_counts": bigint
+        "explicit_track": bigint
+        "release_date": date
+    columns:
+      - name: isrc
+        data_tests:
+          - unique
