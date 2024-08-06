@@ -76,4 +76,5 @@ def process_dataframe(df):
 
 # Process the DataFrame
 fixeddf = process_dataframe(dfspot)
+dfspot = dfspot.columns.str.lower().str.replace(' ', '_') #fix column names for easier upstream navigation in dbt
 dfspot.to_csv('cleanedspotifyencodingfix.csv', encoding='utf-8', index=False)
