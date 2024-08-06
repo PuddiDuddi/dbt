@@ -54,7 +54,7 @@ def extract_deezer_info(data):
         album_title = data['album']['title']
         return title, artist_name, album_title
     except:
-        print(data)
+        print(data) # lazy debug
 
 def process_dataframe(df):
     for index, row in df.iterrows():
