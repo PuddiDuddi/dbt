@@ -27,3 +27,9 @@ seeds:
       - name: isrc
         data_tests:
           - unique
+      - name: track
+        data_tests:
+          - tracksimilarity:
+              config:
+                severity: warn
+                warn_if: ">10"
