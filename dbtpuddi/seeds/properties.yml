@@ -33,3 +33,4 @@ seeds:
               config:
                 severity: warn
                 warn_if: ">10"
+                store_failures: true
